@@ -1,14 +1,14 @@
 # New Year Chaos
 
-number = [1, 2, 3, 4, 5, 6, 7, 8]
-chaos = [1, 2, 4, 5, 3, 8, 6, 7]
+chaos = [2, 1, 5, 3, 4]
 i = 0
 chaotic = True
 bribe = 0
-while i < len(number):
-    diff = i - chaos.index(number[i])
+while i < len(chaos):
+    diff = chaos[i] - (i+1)
     if diff > 2:
         chaotic = True
+        break
     else:
         chaotic = False
     if diff > 0:
