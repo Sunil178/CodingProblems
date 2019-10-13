@@ -11,13 +11,12 @@ while k < len(string)-1:
             str1 = string[i:i+(k+1)]
             str2 = string[j:j+(k+1)]
             c = 0
-            if len(str1) == len(str2):
-                for char in str1:
-                    if str1.count(char) == str2.count(char):
-                        c += 1
-                if c == len(str1):
-                    print(str1, ",", str2)
-                    anagrams += 1
+            for char in str1:
+                if str1.count(char) == str2.count(char):
+                    c += 1
+            if c == len(str1):
+                print(str1, ",", str2)
+                anagrams += 1
             j += 1
         i += 1
     k += 1
