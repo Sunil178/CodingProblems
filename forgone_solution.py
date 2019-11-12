@@ -1,16 +1,16 @@
 # Forgone Solution
 
-t = int(input())
-for test in range(1, t+1):
-    no = int(input())
-    if '4' in str(no):
-        n = no
-        i = 0
-        while i < no:
-            if ('4' not in str(i) and '4' not in str(n)) or ('4' not in str(n) and '4' not in str(i)):
-                res = i + n
-                if res == no:
-                    print("Case #" + str(test) + ":", i, n)
+tests = int(input())
+for test in range(1, test+1):
+    number = int(input())
+    if '4' in str(number):
+        last_number = number
+        initial_number = 0
+        while initial_number < number:
+            if ('4' not in str(initial_number) and '4' not in str(last_number)) or ('4' not in str(last_number) and '4' not in str(initial_number)):
+                result = initial_number + last_number
+                if result == number:
+                    print("Case #" + str(test) + ":", initial_number, last_number)
                     break
-            i += 1
-            n -= 1
+            initial_number += 1
+            last_number -= 1
